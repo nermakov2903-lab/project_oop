@@ -16,7 +16,7 @@ class Truck(Iproduct):   # конкретный продукт
         print("Выпущен новый грузовой автомобиль")
 
 
-class IworkShop:    # Это интерфейс для всех "мастерских"
+class IworkShop(ABC):    # Это интерфейс для всех "мастерских"
     @abstractmethod
     def create(self) -> Iproduct:
         pass
@@ -41,5 +41,6 @@ if __name__ == "__main__":
 
     car.release()
     truck.release()
+
 
 
